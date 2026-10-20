@@ -22,3 +22,9 @@ archive: liblwip.a
 entries:
     if ESP_ALLOW_BSS_SEG_EXTERNAL_MEMORY = y:
         * (espframe_extram_bss)
+
+[mapping:espframe_psram_bss_mdns]
+archive: libespressif__mdns.a
+entries:
+    if ESP_ALLOW_BSS_SEG_EXTERNAL_MEMORY = y:
+        mdns_send (espframe_extram_bss)
